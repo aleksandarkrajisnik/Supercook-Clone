@@ -1,0 +1,318 @@
+@import '../../assets/styles/colors';
+
+.recipeSideModal{
+    position: absolute;
+    top:0;
+    right:0;
+    height: 100%;
+    width: 30%;
+    z-index: 5;
+    background-color: white;
+    overflow: scroll;
+    background-color: $green;
+    background-image: url('../../assets/img/background/vegetable_pattern.svg');
+
+    .recipeImage{
+        width: 100%;
+        height: 40%;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+
+        .closeButton{
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+            svg{
+                font-size: 35px;
+                cursor: pointer;
+                path{
+                    stroke: $darkGray;
+                }
+            }
+        }
+    }
+
+    .recipeInfo{
+        height: 62%;
+        width: 100%;
+        position: absolute;
+        top: 38%;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        background-color: $green;
+        background-image: url('../../assets/img/background/vegetable_pattern.svg');
+        
+
+        .recipeInfoContent{
+            position: absolute;
+            left: 20px;
+            top: -50px;
+            width: calc(100% - 40px);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+
+            .infoModal{
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0px 3px 5px rgba(19, 17, 17, 0.252);
+                
+                .info{
+                    border-bottom: 1px solid $tagBackground;
+                    padding: 15px;
+                    
+                    h5, p{
+                        max-width: 90%;
+                    }
+        
+                    h5{
+                        color: $darkGray;
+                        font-weight: 600;
+                    }
+        
+                    p{
+                        font-size: 11px;
+                        color:gray;
+                        margin:10px 0 15px 0;
+                        
+                            &.noMissedIngredients{
+                                color: $green;
+                            }
+            
+                            &.missedIngredients{
+                                color:red;
+                            }
+                    }
+        
+                    svg{
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                        font-size: 20px;
+                        cursor: pointer;
+                        
+                        &.redHeart{
+                            color:$watermelon;
+                        }
+                    }
+                }
+        
+                .tags{
+                    padding: 15px;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+        
+                .tag{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color:$darkGray;
+                    background-color: $tagBackground;
+                    padding:5px;
+                    border-radius: 5px;
+                    white-space: nowrap;
+                    width: fit-content;
+    
+                    svg{
+                        position: inherit;
+                        font-size: 16px;
+                    } 
+        
+                    span{
+                        font-size: 11px;
+                        margin-left: 3px;
+                    }
+        
+                    &.green{
+                        background-color: $green;
+                        
+                        span, svg{
+                            color:white;
+                        }
+                    }
+
+                    &.gold{
+                        background-color: transparent;
+                        
+                        span, svg{
+                            color:gold;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+    
+            .ingredientInfo{
+                box-shadow: 0px 3px 5px rgba(19, 17, 17, 0.252);
+                border-radius: 5px;
+                background-color: white;
+    
+                h4{
+                    padding: 15px;
+                    border-bottom: 1px solid $tagBackground;
+                    color: $darkGray;
+                    font-weight: 600;
+                }
+    
+                .usedIngredientItem{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px 15px;
+    
+                    span{
+                        font-size: 14px;
+                        color: $darkGray;
+                    }
+    
+                    svg{
+                        font-size: 24px;
+                        color: $green;
+                    }
+                }
+            }
+    
+            .summary{
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0px 3px 5px rgba(19, 17, 17, 0.252);
+
+                h4{
+                    user-select: none;
+                    cursor: pointer;
+                    padding: 15px;
+                    border-bottom: 1px solid $tagBackground;
+                    color: $darkGray;
+                    font-weight: 600;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .summaryText{
+                    padding:10px 15px;
+                    font-size: 13px;
+                    
+                    b{
+                        font-weight: 600;
+                    }
+
+                    a{
+                        color: $watermelon;
+                        transition: 0.3s;
+
+                        &:hover{
+                            color:$watermelonHover;
+                        }
+                    }
+                }
+            }
+
+            .viewFullRecipeBtn{
+                cursor: pointer;
+                user-select: none;
+                box-shadow: 0px 3px 5px rgba(19, 17, 17, 0.252);
+                padding: 5px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                width: 100%;
+                background-color: $watermelon;
+                color:white;
+                transition: 0.3s;
+
+                span{
+                    font-size: 11px;
+                }
+
+                &:hover{
+                    background-color:$watermelonHover;
+                }
+            }
+
+            .suggestedRecipes{
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                border-radius: 5px;
+                
+
+                h4{
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 600;
+
+                }
+
+                .recipe{
+                    padding:0px;
+                    background-color: white;
+                    border-radius: 5px;
+                    min-height: 100px;
+                    
+                    .recipeImage{
+                        width: 40%;
+                        min-height: 100px;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                    }
+
+                    .recipeText{
+                        padding:10px 0 10px 10px;
+                        min-height: 100px;
+                        width: 70%;
+                        
+                        h4{
+                            color: $darkGray;
+                            font-weight: 400;
+                            font-size: 13px;
+                            max-width: 85%;
+                        }
+                
+                        p{
+                            font-size: 10px;
+                            max-width: 85%;
+                
+                            &.noMissedIngredients{
+                                color: $green;
+                            }
+                
+                            &.missedIngredients{
+                                color:red;
+                            }
+                        }
+                    }
+
+                    .recipeActions{
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                
+                        .redHeart{
+                            color:$watermelon;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+}

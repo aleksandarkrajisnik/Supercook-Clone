@@ -1,0 +1,65 @@
+@import '../../assets/styles/colors';
+
+.main{
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $watermelon;
+    background-image: url('../../assets/img/background/vegetable_pattern.svg');
+
+    .mainHeader{
+        padding: 20px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .pantryInfo{
+            color:white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+
+            h3{
+                text-align: center;
+                letter-spacing: 0.5px;
+                font-size: 22px;
+                font-family:'Poppins', sans-serif;
+                font-weight: 500;
+            }
+            span{
+                font-size: 12px;
+            }
+
+
+            .mainHeaderActions{
+                position: absolute;
+                right: 0;
+
+                svg{
+                    color:white;
+                    font-size: 30px;
+                    cursor: pointer;
+                    margin-left: 10px;
+                }
+            }
+    
+        }
+    }
+
+    .mainContainer{
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        padding:30px 20px;
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        overflow: scroll;
+        background-color: rgb(255, 255, 255);
+    }
+
+}

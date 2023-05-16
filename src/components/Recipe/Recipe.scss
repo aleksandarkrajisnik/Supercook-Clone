@@ -1,0 +1,64 @@
+@import '../../assets/styles/colors';
+
+.recipe{
+    padding: 0 10px 0 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 1px 5px rgba(173, 173, 173, 0.252);
+    transition: 0.3s;
+    min-height: 130px;
+    
+    &:hover{
+        box-shadow: 0px 3px 5px rgba(88, 88, 88, 0.252);
+    }
+    
+    .recipeImage{
+        width: 40%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .recipeText{
+        padding:20px 0px 20px 20px;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h4{
+            font-weight: 400;
+            font-size: 15px;
+            max-width: 85%;
+        }
+
+        p{
+            font-size: 11px;
+            max-width: 85%;
+
+            &.noMissedIngredients{
+                color: $green;
+            }
+
+            &.missedIngredients{
+                color:red;
+            }
+        }
+    }
+
+    .recipeActions{
+        position: absolute;
+        right: 10px;
+        top: 20px;
+
+        svg{
+            cursor: pointer;
+            &.redHeart{
+                color:$watermelon;
+            }
+        }
+        
+    }
+
+}

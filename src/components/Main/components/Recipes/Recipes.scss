@@ -1,0 +1,36 @@
+@import '../../../../assets/styles/colors';
+
+.recipes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        margin-bottom: 15px;
+        font-weight: 600;
+        color:$darkGray;
+        font-size: 26px;
+        span{
+            color: $green;
+        }
+    }
+
+    h2{
+        margin-bottom: 15px;    
+        font-weight: 400;
+        font-size: 16px;
+        color:$darkGray;
+    }
+
+    .missingNone, .missingOne, .missingMultiple, .favorites{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+
